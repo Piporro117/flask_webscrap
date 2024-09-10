@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block titulo %} INCIAR SESION {% endblock %}
+
+
+{% block contenido %}
+
+    <!--Pasamos el formulario-->
+    <div class="container from">
+        <h3>INICIO DE SESION</h3>
+        {{ form.hidden_tag() }}
+        {{ wtf.quick_form(form) }}
+    </div>
+
+
+{% endblock %}

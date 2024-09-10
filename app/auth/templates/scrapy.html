@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block titulo %} REGISTRARSE {% endblock %}
+
+
+{% block contenido %}
+
+    <!--Pasamos el formulario-->
+    <div class="container from">
+        <h3>SCRAPY Articles</h3>
+
+        <!--si hay formulario-->
+        {% if form %}
+
+            {{ form.hidden_tag() }}
+            {{ wtf.quick_form(form) }}
+
+        {% endif %}
+
+        <!--Si hay datos-->
+
+        {% if Links %}
+            {% for i in Links %}
+                <ul>
+                   <li><a href="{{i}}" target="_blank"> links </a></li> 
+                </ul>
+            {% endfor %}
+        {% endif %}
+
+        <!--Regresar a pagina -->
+        <div class="container"> 
+            <span class="label label-success"> <a href="{{url_for('authentication.pagina_principal')}}"> Pagina principal</a> </span>
+        </div>
+    
+    </div>
+
+
+{% endblock %}

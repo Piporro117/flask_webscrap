@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block titulo %} 
+    PAGINA PRINCIPAL
+{% endblock %}
+
+
+{% block contenido %}
+    <div class="container">
+        <h3>PAGINA DE INICIO</h3>
+
+        <h4 class="text-primary">Estas loggeado como {{current_user.usuario_nombre.title()}}</h4>
+
+
+         <!--Regresar a pagina -->
+         <div class="container"> 
+            <span class="label label-success"> <a href="{{url_for('authentication.scrapy_data')}}"> Scrapy Data</a> </span>
+        </div>
+    </div>
+
+{% endblock %}

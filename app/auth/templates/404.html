@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    PAGINA NO ENCONTRADA
+{% endblock %}
+
+
+{% block contenido %}   
+    <div class="container"> 
+        <h3>PAGINA NO ENCONTRADA</h3>
+        <br>
+        
+        <span class="label label-success"> <a href="{{url_for('authentication.login_usuario')}}"> Regresar a pagina de inicio </a> </span>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block titulo %} REGISTRARSE {% endblock %}
+
+
+{% block contenido %}
+
+    <!--Pasamos el formulario-->
+    <div class="container from">
+        <h3>REGISTRATE</h3>
+        {{ form.hidden_tag() }}
+        {{ wtf.quick_form(form) }}
+    </div>
+
+
+{% endblock %}
